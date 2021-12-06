@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Hello Coffee</string>
+    <string name="nameClientInputField">Your name</string>
+    <string name="quantity_title">quantity</string>
+    <string name="minus_button">-</string>
+    <string name="plus_button">+</string>
+    <string name="price_title">price</string>
+    <string name="order_button">order</string>
+    <string name="toppings_title">toppings</string>
+    <string name="whipped_cream_topping">Whipped cream</string>
+    <string name="chocolate_topping">Chocolate</string>
+    <string name="order_summary_title">Order Summary</string>
+    <string name="client_name">Name: %s</string>
+    <string name="toppings">Toppings: %s</string>
+    <plurals name="number_of_coffees">
+        <item quantity="one">Quantity: %d coffee</item>
+        <item quantity="other">Quantity: %d coffees</item>
+    </plurals>
+    <string name="order_total_price">Total: %s</string>
+    <string name="thank_you">Thank you for your order!</string>
+    <string name="min_cups_of_coffee_warning">You can\'t order less than 1 cup of coffee</string>
+    <string name="max_cups_of_coffee_warning">You can\'t order more than 100 cups of coffee</string>
+</resources>
