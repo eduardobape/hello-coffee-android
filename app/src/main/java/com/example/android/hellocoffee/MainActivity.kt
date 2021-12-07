@@ -66,9 +66,11 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun displayPrice(price: Int) {
-        binding.tvPrice.text =
-            NumberFormat.getCurrencyInstance().format(price)
+        binding.tvPrice.text = orderPriceTextRepresentation(price)
     }
+
+    private fun orderPriceTextRepresentation(orderPrice: Int) : String =
+        NumberFormat.getCurrencyInstance().format(orderPrice)
 
     private fun checkTopping(view: View) {
         if (view is CheckBox) {
@@ -131,10 +133,7 @@ class MainActivity : AppCompatActivity() {
             numberOfCoffees
         )
         binding.tvPriceOrderSummary.text =
-            getString(
-                R.string.order_total_price,
-                NumberFormat.getCurrencyInstance().format(orderPrice)
-            )
+            getString(R.string.order_total_price, orderPriceTextRepresentation(orderPrice))
         binding.llyContainerOrderSummary.visibility = View.VISIBLE
     }
 
@@ -169,5 +168,5 @@ class MainActivity : AppCompatActivity() {
             clientName,
             toppingsTextRepresentation(),
             resources.getQuantityString(R.plurals.number_of_coffees, numberOfCoffees, numberOfCoffees),
-            NumberFormat.getCurrencyInstance().format(orderPrice))
+            orderPriceTextRepresentation(orderPrice))
 }
