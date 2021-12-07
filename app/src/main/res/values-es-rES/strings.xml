@@ -12,8 +12,8 @@
     <string name="client_name">Nombre: <xliff:g id="client_name" example="Pedro">%s</xliff:g></string>
     <string name="toppings">Ingredientes: %s</string>
     <plurals name="number_of_coffees">
-        <item quantity="one">Cantidad: <xliff:g id="number_of_coffees" example="1">%d</xliff:g> café</item>
-        <item quantity="other">Cantidad: <xliff:g id="number_of_coffees" example="2">%d</xliff:g> cafés</item>
+        <item quantity="one">Cantidad: <xliff:g id="one_cup_of_coffee" example="1">%d</xliff:g> café</item>
+        <item quantity="other">Cantidad: <xliff:g id="more_than_one_cup_of_coffee" example="2">%d</xliff:g> cafés</item>
     </plurals>
     <string name="order_total_price">Total: <xliff:g id="order_price" example="$20">%s</xliff:g></string>
     <string name="thank_you">¡Gracias por su pedido!</string>
