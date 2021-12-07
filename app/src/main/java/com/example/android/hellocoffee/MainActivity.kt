@@ -164,12 +164,10 @@ class MainActivity : AppCompatActivity() {
     private fun composeEmailSubject(
         clientName: String,
         numberOfCoffees: Int,
-        orderPrice: Int): String {
-        return """
-            |${getString(R.string.client_name, clientName)}
-            |${getString(R.string.toppings, toppingsTextRepresentation())}
-            |${resources.getQuantityString(R.plurals.number_of_coffees, numberOfCoffees, numberOfCoffees)}
-            |${getString(R.string.order_total_price, NumberFormat.getCurrencyInstance(Locale("ES", "ES")).format(orderPrice))}
-        """.trimMargin()
-    }
+        orderPrice: Int): String = getString(
+            R.string.email_body,
+            clientName,
+            toppingsTextRepresentation(),
+            resources.getQuantityString(R.plurals.number_of_coffees, numberOfCoffees, numberOfCoffees),
+            NumberFormat.getCurrencyInstance(Locale("ES", "ES")).format(orderPrice))
 }

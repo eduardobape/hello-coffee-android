@@ -20,4 +20,10 @@
     <string name="min_cups_of_coffee_warning">No puede pedir menos de 1 taza de café</string>
     <string name="max_cups_of_coffee_warning">No puede pedir más de 100 tazas de café</string>
     <string name="email_subject">Resumen del pedido</string>
+    <string name="email_body">
+        Nombre: <xliff:g id="client_name" example="Pedro">%1$s</xliff:g>\n
+        Ingredientes: %2$s\n
+        %3$s\n
+        Total: <xliff:g id="order_price" example="$20">%4$s</xliff:g>
+    </string>
 </resources>
