@@ -1,5 +1,7 @@
 package com.example.android.hellocoffee
 
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.view.View
 import android.widget.CheckBox
@@ -45,6 +47,14 @@ class MainActivity : AppCompatActivity() {
             displayOrderSummary(
                 binding.edtClientNameInput.text.toString().trim(),
                 numberOfCoffees
+            )
+            openEmailOrderSummary(
+                arrayOf("pablopato@example.com"),
+                getString(R.string.email_subject),
+                composeEmailSubject(
+                    binding.edtClientNameInput.text.toString(),
+                    numberOfCoffees,
+                    orderPrice)
             )
         }
 
@@ -137,5 +147,29 @@ class MainActivity : AppCompatActivity() {
             toppingsText += getString(R.string.chocolate_topping)
         }
         return toppingsText
+    }
+
+    private fun openEmailOrderSummary(emailTo: Array<String>, subject: String, emailBody: String) {
+        val intent = Intent(Intent.ACTION_SENDTO).apply {
+            data = Uri.parse("mailto:")
+            putExtra(Intent.EXTRA_EMAIL, emailTo)
+            putExtra(Intent.EXTRA_SUBJECT, subject)
+            putExtra(Intent.EXTRA_TEXT, emailBody)
+        }
+        if (intent.resolveActivity(packageManager) != null) {
+            startActivity(intent)
+        }
+    }
+
+    private fun composeEmailSubject(
+        clientName: String,
+        numberOfCoffees: Int,
+        orderPrice: Int): String {
+        return """
+            |${getString(R.string.client_name, clientName)}
+            |${getString(R.string.toppings, toppingsTextRepresentation())}
+            |${resources.getQuantityString(R.plurals.number_of_coffees, numberOfCoffees, numberOfCoffees)}
+            |${getString(R.string.order_total_price, NumberFormat.getCurrencyInstance(Locale("ES", "ES")).format(orderPrice))}
+        """.trimMargin()
     }
 }

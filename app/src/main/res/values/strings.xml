@@ -20,4 +20,5 @@
     <string name="thank_you">Thank you for your order!</string>
     <string name="min_cups_of_coffee_warning">You can\'t order less than 1 cup of coffee</string>
     <string name="max_cups_of_coffee_warning">You can\'t order more than 100 cups of coffee</string>
+    <string name="email_subject">Order summary</string>
 </resources>
