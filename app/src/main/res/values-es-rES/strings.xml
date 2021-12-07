@@ -23,7 +23,7 @@
     <string name="email_body">
         Nombre: <xliff:g id="client_name" example="Pedro">%1$s</xliff:g>\n
         Ingredientes: %2$s\n
-        %3$s\n
+        <xliff:g id="number_cups_of_coffee" example="Cantidad: 2 cafés">%3$s</xliff:g>\n
         Total: <xliff:g id="order_price" example="$20">%4$s</xliff:g>
     </string>
 </resources>
