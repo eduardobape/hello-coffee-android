@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">Hola Café</string>
+    <string name="nameClientInputField">Su nombre</string>
+    <string name="quantity_title">cantidad</string>
+    <string name="price_title">precio</string>
+    <string name="order_button">Pedir</string>
+    <string name="toppings_title">ingredientes</string>
+    <string name="whipped_cream_topping">Crema batida</string>
+    <string name="chocolate_topping">Chocolate</string>
+    <string name="order_summary_title">Resumen del pedido</string>
+    <string name="client_name">Nombre: <xliff:g id="client_name" example="Pedro">%s</xliff:g></string>
+    <string name="toppings">Ingredientes: %s</string>
+    <plurals name="number_of_coffees">
+        <item quantity="one">Cantidad: <xliff:g id="number_of_coffees" example="1">%d</xliff:g> café</item>
+        <item quantity="other">Cantidad: <xliff:g id="number_of_coffees" example="2">%d</xliff:g> cafés</item>
+    </plurals>
+    <string name="order_total_price">Total: <xliff:g id="order_price" example="$20">%s</xliff:g></string>
+    <string name="thank_you">¡Gracias por su pedido!</string>
+    <string name="min_cups_of_coffee_warning">No puede pedir menos de 1 taza de café</string>
+    <string name="max_cups_of_coffee_warning">No puede pedir más de 100 tazas de café</string>
+    <string name="email_subject">Resumen del pedido</string>
+</resources>

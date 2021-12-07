@@ -2,8 +2,8 @@
     <string name="app_name">Hello Coffee</string>
     <string name="nameClientInputField">Your name</string>
     <string name="quantity_title">quantity</string>
-    <string name="minus_button">-</string>
-    <string name="plus_button">+</string>
+    <string name="minus_button" translatable="false">-</string>
+    <string name="plus_button" translatable="false">+</string>
     <string name="price_title">price</string>
     <string name="order_button">order</string>
     <string name="toppings_title">toppings</string>
