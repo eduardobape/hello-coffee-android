@@ -67,7 +67,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun displayPrice(price: Int) {
         binding.tvPrice.text =
-            NumberFormat.getCurrencyInstance(Locale("ES", "ES")).format(price)
+            NumberFormat.getCurrencyInstance().format(price)
     }
 
     private fun checkTopping(view: View) {
@@ -133,7 +133,7 @@ class MainActivity : AppCompatActivity() {
         binding.tvPriceOrderSummary.text =
             getString(
                 R.string.order_total_price,
-                NumberFormat.getCurrencyInstance(Locale("ES", "ES")).format(orderPrice)
+                NumberFormat.getCurrencyInstance().format(orderPrice)
             )
         binding.llyContainerOrderSummary.visibility = View.VISIBLE
     }
@@ -169,5 +169,5 @@ class MainActivity : AppCompatActivity() {
             clientName,
             toppingsTextRepresentation(),
             resources.getQuantityString(R.plurals.number_of_coffees, numberOfCoffees, numberOfCoffees),
-            NumberFormat.getCurrencyInstance(Locale("ES", "ES")).format(orderPrice))
+            NumberFormat.getCurrencyInstance().format(orderPrice))
 }
