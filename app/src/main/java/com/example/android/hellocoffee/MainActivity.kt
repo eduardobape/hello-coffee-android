@@ -31,6 +31,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
         displayQuantity(INITIAL_CUPS_OF_COFFEE)
         displayPrice(calculateOrderPrice(INITIAL_CUPS_OF_COFFEE))
@@ -57,8 +58,6 @@ class MainActivity : AppCompatActivity() {
                     orderPrice)
             )
         }
-
-        setContentView(binding.root)
     }
 
     private fun displayQuantity(quantity: Int) {
